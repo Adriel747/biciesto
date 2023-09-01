@@ -1,15 +1,13 @@
-import sumar from "./sumador";
+import biciesto from "./sumador.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const year = document.querySelector("#year");
+const form = document.querySelector("#biciesto-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+const ano = Number.parseInt(year.value);
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + biciesto(ano) + "</p>";
 });
